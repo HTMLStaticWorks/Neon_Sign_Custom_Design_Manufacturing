@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Configurator - Neon Studio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-right: 4px;">
+        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="var(--accent-primary)" fill="rgba(255, 94, 122, 0.1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 8px var(--accent-primary));"/>
+      </svg>
+      <span>NEON</span> STUDIO
+    </div>
+    <button class="hamburger">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home-2.html">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon theme-toggle" title="Toggle Dark/Light Mode">◐</button>
+      <button class="btn-icon rtl-toggle" title="Toggle RTL/LTR">⇄</button>
+    <a href="design-configurator.html" class="btn btn-secondary" style="padding: 10px 20px;">Create Your Sign</a>
+      <a href="login.html" class="btn btn-primary" style="padding: 10px 20px;">Login</a>
+      </div>
+  </nav>
+
+  <!-- Configurator Section -->
+  <section class="section" style="padding-top: 140px; min-height: 100vh;">
+    <div class="container">
+      <div class="section-header text-center fade-up">
+        <h2>Design Your Own Neon</h2>
+        <p>Type your text, choose your font, and select your glow to see a live preview.</p>
+      </div>
+
+      <div class="configurator-layout fade-up">
+        <!-- Live Preview -->
+        <div class="config-preview" id="previewArea">
+          <div class="config-preview-text neon-text" id="previewText">Good Vibes</div>
+        </div>
+        
+        <!-- Controls -->
+        <div class="config-controls">
+          <div class="form-group">
+            <label class="form-label">Enter Text</label>
+            <input type="text" class="form-control" id="configText" value="Good Vibes">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Select Font</label>
+            <select class="form-control" id="configFont">
+              <option value="'Outfit', sans-serif">Modern (Outfit)</option>
+              <option value="'Inter', sans-serif">Clean (Inter)</option>
+              <option value="cursive">Cursive Script</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Select Color</label>
+            <div style="display: flex; gap: 12px; margin-top: 8px;">
+              <button class="color-btn" style="width: 40px; height: 40px; border-radius: 50%; background: #FF5E7A; border: 2px solid #fff; cursor: pointer;" data-color="#FF5E7A"></button>
+              <button class="color-btn" style="width: 40px; height: 40px; border-radius: 50%; background: #FFB84D; border: 2px solid transparent; cursor: pointer;" data-color="#FFB84D"></button>
+              <button class="color-btn" style="width: 40px; height: 40px; border-radius: 50%; background: #5AF0D6; border: 2px solid transparent; cursor: pointer;" data-color="#5AF0D6"></button>
+              <button class="color-btn" style="width: 40px; height: 40px; border-radius: 50%; background: #8DF55A; border: 2px solid transparent; cursor: pointer;" data-color="#8DF55A"></button>
+              <button class="color-btn" style="width: 40px; height: 40px; border-radius: 50%; background: #F8FAFC; border: 2px solid transparent; cursor: pointer;" data-color="#F8FAFC"></button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Size</label>
+            <select class="form-control" id="configSize">
+              <option value="50px">Small (~50cm)</option>
+              <option value="80px" selected>Medium (~80cm)</option>
+              <option value="120px">Large (~120cm)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Backing Style</label>
+            <select class="form-control" id="configBacking">
+              <option value="cut-to-shape">Cut to Shape (Default)</option>
+              <option value="cut-to-letter">Cut to Letter</option>
+              <option value="full-board">Full Acrylic Board</option>
+              <option value="invisible">Invisible Backing</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Usage Environment</label>
+            <select class="form-control" id="configUsage">
+              <option value="indoor">Indoor (Standard)</option>
+              <option value="outdoor">Outdoor Waterproof (IP67) +$50</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Accessories</label>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 8px;">
+              <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; color: var(--text-secondary);">
+                <input type="checkbox" id="configDimmer" checked style="width: 18px; height: 18px; accent-color: var(--accent-primary);">
+                Smart Dimmer Remote (Included)
+              </label>
+              <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; color: var(--text-secondary);">
+                <input type="checkbox" id="configMount" checked style="width: 18px; height: 18px; accent-color: var(--accent-primary);">
+                Standard Wall Mounting Kit (Included)
+              </label>
+              <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; color: var(--text-secondary);">
+                <input type="checkbox" id="configChain" style="width: 18px; height: 18px; accent-color: var(--accent-primary);">
+                Ceiling Hanging Chain (+$15)
+              </label>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="width: 100%; margin-top: 24px;">Request Quote for this Design</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-4">
+        <div>
+          <div class="nav-brand mb-6">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-right: 4px;">
+              <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="var(--accent-primary)" fill="rgba(255, 94, 122, 0.1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 8px var(--accent-primary));"/>
+            </svg>
+            <span>NEON</span> STUDIO
+          </div>
+          <p>The global leader in luxury custom LED neon signs and experiential art installations.</p>
+          <div class="social-links" style="display: flex; gap: 16px; margin-top: 24px;">
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4">Company</h3>
+          <p class="mb-2"><a href="about.html">About Us</a></p>
+          <p class="mb-2"><a href="gallery.html">Gallery</a></p>
+          <p class="mb-2"><a href="pricing.html">Pricing</a></p>
+          <p class="mb-2"><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+          <h3 class="mb-4">Services</h3>
+          <p class="mb-2"><a href="services.html">Commercial Neon</a></p>
+          <p class="mb-2"><a href="services.html">Wedding Signs</a></p>
+          <p class="mb-2"><a href="services.html">Home Decor</a></p>
+          <p class="mb-2"><a href="services.html">Bar & Restaurant</a></p>
+        </div>
+        <div>
+          <h3 class="mb-4">Stay Illuminated</h3>
+          <p class="mb-4">Subscribe for exclusive designs and neon inspiration.</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <input type="email" class="form-control" placeholder="Enter email" style="padding: 10px;">
+            <button class="btn btn-primary" style="padding: 10px 20px;">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Neon Studio Manufacturing. All rights reserved.</p>
+        <div style="display: flex; gap: 24px;">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Shipping</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Configurator Logic
+    const textInput = document.getElementById('configText');
+    const fontSelect = document.getElementById('configFont');
+    const sizeSelect = document.getElementById('configSize');
+    const colorBtns = document.querySelectorAll('.color-btn');
+    const previewText = document.getElementById('previewText');
+
+    textInput.addEventListener('input', (e) => {
+      previewText.textContent = e.target.value || 'Your Text';
+    });
+
+    fontSelect.addEventListener('change', (e) => {
+      previewText.style.fontFamily = e.target.value;
+    });
+
+    sizeSelect.addEventListener('change', (e) => {
+      previewText.style.fontSize = e.target.value;
+    });
+
+    colorBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        colorBtns.forEach(b => b.style.borderColor = 'transparent');
+        e.target.style.borderColor = '#fff';
+        const color = e.target.dataset.color;
+        previewText.style.textShadow = `0 0 5px #fff, 0 0 10px #fff, 0 0 20px ${color}, 0 0 40px ${color}, 0 0 80px ${color}`;
+      });
+    });
+  </script>
+</body>
+</html>

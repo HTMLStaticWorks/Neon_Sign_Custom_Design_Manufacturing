@@ -1,0 +1,53 @@
+body.light-mode {
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #E2E8F0;
+  --bg-card: #FFFFFF;
+  --text-primary: #08090D;
+  --text-secondary: #475569;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --neon-glow: rgba(255, 94, 122, 0.3);
+  --neon-glow-secondary: rgba(255, 184, 77, 0.3);
+  --neon-glow-third: rgba(90, 240, 214, 0.3);
+}
+
+body.light-mode .navbar {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+
+
+body.light-mode .portfolio-overlay {
+  background: linear-gradient(to top, rgba(255,255,255, 0.95), transparent);
+}
+
+body.light-mode .card-icon {
+  background: rgba(255, 94, 122, 0.15);
+  border-color: rgba(255, 94, 122, 0.3);
+}
+
+body.light-mode .btn-secondary {
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+body.light-mode .btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .auth-card {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode .nav-links a:hover,
+body.light-mode .nav-links a.active {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode ::selection {
+  background: var(--accent-primary);
+  color: #08090D;
+}
+body.light-mode ::-moz-selection {
+  background: var(--accent-primary);
+  color: #08090D;
+}

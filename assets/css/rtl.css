@@ -1,0 +1,62 @@
+body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+body[dir="rtl"] .nav-brand {
+  flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .nav-links {
+  flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .nav-actions {
+  flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .section-header.text-left {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+body[dir="rtl"] .configurator-layout {
+  direction: rtl;
+}
+
+body[dir="rtl"] .config-controls {
+  border-left: none;
+  border-right: 1px solid var(--border-color);
+}
+
+body[dir="rtl"] .hero-actions {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  body[dir="rtl"] .hero-actions {
+    flex-direction: column;
+  }
+}
+
+body[dir="rtl"] .btn {
+  flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .btn i, body[dir="rtl"] .btn svg {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+body[dir="rtl"] .process-modern-right::before {
+  left: auto;
+  right: 40px;
+}
+
+@media (max-width: 992px) {
+  body[dir="rtl"] .process-modern-right::before {
+    left: auto;
+    right: 20px;
+  }
+}
