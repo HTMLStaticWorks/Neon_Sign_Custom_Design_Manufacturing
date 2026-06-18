@@ -60,3 +60,7 @@ body[dir="rtl"] .process-modern-right::before {
     right: 20px;
   }
 }
+
+body[dir="rtl"] .faq-question {
+  text-align: right;
+}

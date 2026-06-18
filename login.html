@@ -13,7 +13,7 @@
       text-decoration: none;
     }
     .auth-link:hover {
-      color: var(--accent-secondary);
+      color: var(--accent-primary);
       text-shadow: 0 0 8px var(--neon-glow);
     }
   </style>
@@ -29,7 +29,7 @@
 
   <div class="auth-card fade-up" style="box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 1px solid var(--border-color); border-radius: 24px; width: 100%; max-width: 500px; margin: 0 auto; padding: clamp(24px, 6vw, 48px);">
     <div class="text-center mb-8">
-      <a href="index.html" class="nav-brand" style="justify-content: center; font-size: clamp(24px, 6vw, 32px); margin-bottom: 16px; white-space: nowrap; text-decoration: none;">
+      <a href="index.html" class="nav-brand" style="justify-content: center; margin-bottom: 16px; white-space: nowrap; text-decoration: none;">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-right: 4px;">
         <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="var(--accent-primary)" fill="rgba(255, 94, 122, 0.1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 8px var(--accent-primary));"/>
       </svg>
@@ -47,8 +47,8 @@
       <div class="form-group" style="position: relative;">
         <label class="form-label" for="password">Password</label>
         <div style="position: relative;">
-          <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
-          <button type="button" class="password-toggle" onclick="togglePassword('password', this)" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center;">
+          <input type="password" id="password" class="form-control" placeholder="Enter your password" required style="padding-inline-end: 48px;">
+          <button type="button" class="password-toggle" onclick="togglePassword('password', this)" style="position: absolute; inset-inline-end: 16px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
           </button>
         </div>

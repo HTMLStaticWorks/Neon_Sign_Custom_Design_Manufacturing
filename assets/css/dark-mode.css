@@ -6,8 +6,6 @@ body.light-mode {
   --text-secondary: #475569;
   --border-color: rgba(0, 0, 0, 0.1);
   --neon-glow: rgba(255, 94, 122, 0.3);
-  --neon-glow-secondary: rgba(255, 184, 77, 0.3);
-  --neon-glow-third: rgba(90, 240, 214, 0.3);
 }
 
 body.light-mode .navbar {
@@ -50,4 +48,10 @@ body.light-mode ::selection {
 body.light-mode ::-moz-selection {
   background: var(--accent-primary);
   color: #08090D;
+}
+
+body.light-mode .badge-accent {
+  background: rgba(0, 150, 150, 0.1);
+  color: #008080;
+  border-color: rgba(0, 150, 150, 0.3);
 }
